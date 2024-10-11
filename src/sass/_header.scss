@@ -29,7 +29,7 @@
   font-size: 36px;
   margin-left: 12px;
   &:hover {
-    color: $secondary-color;
+    color: $active-color;
   }
 }
 
@@ -37,41 +37,19 @@
   color: $light-color;
   font-size: 30px;
   &.active {
-    color: $secondary-color;
+    color: $active-color;
   }
   &:hover {
-    color: $secondary-color;
+    color: $active-color;
   }
   &:focus {
-    color: $secondary-color;
+    color: $active-color;
   }
-  //   &:visited {
-  //     color: purple;
-  //   }
 }
 
 .nav-link.current {
-  color: $secondary-color;
+  color: $active-color;
 }
-
-.navbar-nav .nav-link .current {
-  color: red;
-}
-
-// .nav-link[aria-current='page'] {
-//   color: #9b59b6; /* Current page link color */
-// }
-
-// .header-link.current::after {
-//   content: '';
-//   position: absolute;
-//   bottom: -25px;
-//   left: 0;
-//   height: 4px;
-//   width: 100%;
-//   border-radius: 2px;
-//   background: var(--hover-focus-color);
-// }
 
 @media (min-width: 1400px) {
   .navbar-expand-xxl .navbar-nav .nav-link {
@@ -92,6 +70,6 @@
   align-items: center;
   justify-content: center;
   &:hover {
-    background-color: $secondary-color;
+    background-color: $active-color;
   }
 }
