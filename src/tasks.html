@@ -38,64 +38,140 @@
       </nav>
       <button type="button" class="add-task-button">Add task</button>
     </header>
-    <main>
-      <section>
-        <h1>Task List</h1>
-        <button type="button">Add new</button>
-      </section>
-      
-      <section aria-label="Current date">
-        <p>16 <span>September</span> <span>2024</span></p>
-        <p>Monday</p>
-      </section>
-
-    <section aria-label="Filter tasks by category">
-    <input>Filter by category</input>
-    <div>
-    <button type="button">All</button>
-    <button type="button">Active</button>
-    <button type="button">Completed</button>
+    <main class="main-container">
+    <section class="section-filters-container" aria-label="Filters">
+    <div class="filters-wrap">
+    <select class="form-select" aria-label="Select categories">
+  <option value="all" >All categories</option>
+  <option value="personal">Personal</option>
+  <option value="work">Work</option>
+  <option value="health">Health</option>
+  <option value="finance">Finance</option>
+  <option value="family">Family</option>
+  <option value="friends">Friends</option>
+  <option value="home">Home</option>
+  <option value="shopping">Shopping</option>
+  <option value="Travel">Travel</option>
+  <option value="learning">Learning</option>
+  <option value="miscellaneous">Miscellaneous</option>
+</select>
+    <div class="wrap-filter-isCompleted">
+    <button type="button" class="btn-isCompleted">All</button>
+    <button type="button" class="btn-isCompleted">Active</button>
+    <button type="button" class="btn-isCompleted">Completed</button>
   </div>
-      </section>
+  </div>
+      <div aria-label="Current date" class="wrap-data">
+        <p class="data-day">16</p>
+        <p class="data-month">September <span class="data-year">2024</span></p>
+      </div>
+    </section>
       <section aria-label="Task List">
-        <ul>
-          <li>
-            <article>
-              <div>Icon done</div>
-              <div>
-                <div>
-                  <h4>Title task</h4>
-                  <div>
-                    <button type="button">Edit</button>
-                    <button type="button">Delete</button>
+        <ul class="tasks-list">
+          <li class="task-item">
+                  <svg width="32" height="32" class="icon-notCompleted">
+                    <use href="./images/symbol-defs.svg#icon-circle">
+                    </use>
+                </svg>
+              <div class="wrap-content">
+                <div class="title-container">
+                  <h2 class="title-task">Title task</h2>
+                  <div class="icons-container">
+                    <button type="button" class="icon-btn"><svg width="30" height="30"class="svg-icon" >
+                    <use href="./images/symbol-defs.svg#icon-pencil-fill">
+                    </use>
+                </svg>
+              </button>
+                    <button type="button" class="icon-btn"><svg width="30" height="30" class="svg-icon">
+                    <use href="./images/symbol-defs.svg#icon-trash-fill">
+                    </use>
+                </svg></button>
                   </div>
                 </div>
-                <p>Category</p>
-                <p>Description</p>
+                <p class="category-task">Category</p>
+                <p class="description-task">Wyjątkowa oferta dla tych, którzy kochają audiobooki! Tylko teraz pierwsze 12 miesięcy w Storytel Unlimited za jedyne 320 zł. Słuchaj swoich ulubionych historii bez limitów - gdzie chcesz i kiedy chcesz.</p>
+                       <p class="dedline-data-task">15 Dec 2024</p>
               </div>
-            </article>
           </li>
-
-          <li>
-            <article>
-              <div>Icon done</div>
-              <div>
-                <div>
-                  <h4>Title task</h4>
-                  <div>
-                    <button type="button">Edit</button>
-                    <button type="button">Delete</button>
+          <li class="task-item">
+                  <svg width="32" height="32" class="icon-notCompleted">
+                    <use href="./images/symbol-defs.svg#icon-circle">
+                    </use>
+                </svg>
+              <div class="wrap-content">
+                <div class="title-container">
+                  <h2 class="title-task">Title task</h2>
+                  <div class="icons-container">
+                    <button type="button" class="icon-btn"><svg width="30" height="30"class="svg-icon" >
+                    <use href="./images/symbol-defs.svg#icon-pencil-fill">
+                    </use>
+                </svg>
+              </button>
+                    <button type="button" class="icon-btn"><svg width="30" height="30" class="svg-icon">
+                    <use href="./images/symbol-defs.svg#icon-trash-fill">
+                    </use>
+                </svg></button>
                   </div>
                 </div>
-                <p>Category</p>
-                <p>Description</p>
+                <p class="category-task">Category</p>
+                       <p class="dedline-data-task">15 Dec 2024</p>
               </div>
-            </article>
+          </li>
+                    <li class="task-item">
+                  <svg width="32" height="32" class="icon-notCompleted">
+                    <use href="./images/symbol-defs.svg#icon-check2-circle">
+                    </use>
+                </svg>
+              <div class="wrap-content">
+                <div class="title-container">
+                  <h3 class="title-task-completed">Title task</h3>
+                  <div class="icons-container">
+                    <button type="button" class="icon-btn"><svg width="30" height="30"class="svg-icon" >
+                    <use href="./images/symbol-defs.svg#icon-pencil-fill">
+                    </use>
+                </svg>
+              </button>
+                    <button type="button" class="icon-btn"><svg width="30" height="30" class="svg-icon">
+                    <use href="./images/symbol-defs.svg#icon-trash-fill">
+                    </use>
+                </svg></button>
+                  </div>
+                </div>
+                <p class="category-task">Category</p>
+                <p class="description-task-completed">Wyjątkowa oferta dla tych, którzy kochają audiobooki! Tylko teraz pierwsze 12 miesięcy w Storytel Unlimited za jedyne 320 zł. Słuchaj swoich ulubionych historii bez limitów - gdzie chcesz i kiedy chcesz.</p>
+                       <p class="dedline-data-task">15 Dec 2024</p>
+              </div>
+          </li>
+                  <li class="task-item">
+                  <svg width="32" height="32" class="icon-notCompleted">
+                    <use href="./images/symbol-defs.svg#icon-check2-circle">
+                    </use>
+                </svg>
+              <div class="wrap-content">
+                <div class="title-container">
+                  <h3 class="title-task-completed">Title task</h3>
+                  <div class="icons-container">
+                    <button type="button" class="icon-btn"><svg width="30" height="30"class="svg-icon" >
+                    <use href="./images/symbol-defs.svg#icon-pencil-fill">
+                    </use>
+                </svg>
+              </button>
+                    <button type="button" class="icon-btn"><svg width="30" height="30" class="svg-icon">
+                    <use href="./images/symbol-defs.svg#icon-trash-fill">
+                    </use>
+                </svg></button>
+                  </div>
+                </div>
+                <p class="category-task">Category</p>
+              </div>
           </li>
         </ul>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer-container">
+       <p> &copy; 2024 TaskMaster. All Rights Reserved.</p>
+        <p >Manage your tasks efficiently and achieve more with TaskMaster.</p>
+    </footer>
   </body>
 </html>
 

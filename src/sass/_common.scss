@@ -26,6 +26,7 @@ body {
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 
 button {
@@ -34,4 +35,8 @@ button {
 
 a {
   text-decoration: none;
+}
+
+p {
+  margin-bottom: 0;
 }
