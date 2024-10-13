@@ -20,7 +20,8 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "nanoid": "^5.0.7"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

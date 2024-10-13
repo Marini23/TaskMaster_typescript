@@ -1,7 +1,7 @@
 @import './variables';
 
 .main-container {
-  padding: 200px 80px;
+  padding: 200px 80px 80px 80px;
   margin: 0 auto;
 }
 
@@ -88,6 +88,12 @@
 .icon-notCompleted {
   cursor: pointer;
   margin-top: 14px;
+  &:hover {
+    fill: $active-color;
+  }
+  &:active {
+    fill: $active-color;
+  }
 }
 
 .wrap-content {
