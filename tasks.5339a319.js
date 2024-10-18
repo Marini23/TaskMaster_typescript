@@ -1,0 +1,2 @@
+const e=document.querySelector(".modal-content"),n=document.querySelector(".overlay"),o=document.querySelector(".btn-modal-open");document.querySelector(".btn-modal-close");o.addEventListener("click",(function(){console.log("open"),e.classList.remove("hidden"),n.classList.remove("hidden")}));const t=function(){e.classList.add("hidden"),n.classList.add("hidden")};n.addEventListener("click",t),document.addEventListener("keydown",(function(n){console.log(n.key),"Escape"!==n.key||e.classList.contains("hidden")||t()}));
+//# sourceMappingURL=tasks.5339a319.js.map

@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector(".modal-content"),n=document.querySelector(".overlay"),o=document.querySelector(".btn-modal-open");document.querySelector(".btn-modal-close");o.addEventListener("click",(function(){console.log("open"),e.classList.remove("hidden"),n.classList.remove("hidden")}));var d=function(){e.classList.add("hidden"),n.classList.add("hidden")};n.addEventListener("click",d),document.addEventListener("keydown",(function(n){console.log(n.key),"Escape"!==n.key||e.classList.contains("hidden")||d()}))}();
+//# sourceMappingURL=tasks.a807b18e.js.map
