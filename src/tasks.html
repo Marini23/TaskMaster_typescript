@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TaskMaster</title>
     <link rel="stylesheet" href="./sass/index.scss" />
-    <!-- <script src=
-"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity=
-"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
-        crossorigin="anonymous">
-        </script> -->
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
     <header class="header">
@@ -43,53 +36,58 @@
     </div>
         </ul>
       </nav>
-       <button type="button" class="add-task-button" data-bs-toggle="modal" data-bs-target="#addModal">
+      <button type="button" class="add-task-button btn-modal-open" >
   Add task
 </button>
     <!-- Modal -->
-    <div  class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" >Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+<section class="modal-content hidden"  >
+<h3>Add task</h3>
+<form class="needs-validation" novalidate>
+  <div class="mb-3">
+    <label for="titleInput" class="form-label">Title*</label>
+    <input type="text" class="form-control" id="titleInput" required />
+    <div class="invalid-feedback">
+      Please create a title.
     </div>
   </div>
+  <div class="mb-3">
+    <label for="categorySelect" class="form-label">Category*</label>
+    <select class="form-select modal-select" aria-label="Select categories" id="categorySelect" required>
+      <option value="" selected></option>
+      <option value="personal">Personal</option>
+    option value="work">Work</option>
+  <option value="health">Health</option>
+  <option value="finance">Finance</option>
+  <option value="family">Family</option>
+  <option value="friends">Friends</option>
+  <option value="home">Home</option>
+  <option value="shopping">Shopping</option>
+  <option value="Travel">Travel</option>
+  <option value="learning">Learning</option>
+  <option value="miscellaneous">Miscellaneous</option>
+    </select>
+    <div class="invalid-feedback">
+      Please choose a category.
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="descriptionText" class="form-label">Description (optional)</label>
+    <textarea type="text" class="form-control" id="descriptionText" />
+  </div>
+    <div class="mb-3">
+    <label for="deadlineTime" class="form-label">Deadline*</label>
+    <input type="datetime-local" class="form-control" id="deadlineTime" required />
+    <div class="invalid-feedback">
+      Please choose deadline time.
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+</section>
+<div class="overlay hidden"></div>
 </div>
-
-
-      </div>
     </header>
     <main class="main-container">
-             <button type="button" class="add-task-button" data-bs-toggle="modal" data-bs-target="#addModal">
-  Add task
-</button>
-    <!-- Modal -->
-    <div  class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" >Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
     <section class="section-filters-container" aria-label="Filters">
     <div class="filters-wrap">
     <select class="form-select" aria-label="Select categories">
@@ -223,6 +221,7 @@
        <p> &copy; 2024 TaskMaster. All Rights Reserved.</p>
         <p >Manage your tasks efficiently and achieve more with TaskMaster.</p>
     </footer>
+        <script type="module" src="./tasks.js"></script>
   </body>
 </html>
 
